@@ -1,7 +1,7 @@
 <h1 align="center">Formacao C# da Alura</h1>
 
 ## Indice
-- [Descrição do Projeto](#descrição-do-projeto)
+- [Descrição do Projeto](#breve-descrição-do-projeto)
 - [Status do Projeto](#status-do-projeto)
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
 - [Pré-Requisitos](#pré-requisitos)
