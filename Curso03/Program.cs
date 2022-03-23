@@ -9,6 +9,7 @@ namespace Curso03
         {
             GerenciadorDeBonficacao gerenciadorDeBonificacao = new GerenciadorDeBonficacao();
 
+            //Criando os objetos que derivam de funcionário
             Desenvolvedor deselvolvedor = new Desenvolvedor("321654987-78");
             deselvolvedor.Nome = "Jefferson";
 
@@ -34,7 +35,7 @@ namespace Curso03
 
             gerenciadorDeBonificacao.Registrar(auxiliar);
 
-
+            //Exibindo todos resultados
             Console.WriteLine("O salario do " + deselvolvedor.Nome + " é: " + deselvolvedor.Salario);
             Console.WriteLine("A bonificação do " + deselvolvedor.Nome + " é de: " + deselvolvedor.GetBonificacao());
             deselvolvedor.AumentarSalario();
