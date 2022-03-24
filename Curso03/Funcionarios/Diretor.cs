@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Curso03.Funcionarios
 {
-    public class Diretor : Funcionario
+    public class Diretor : FuncionarioAutenticavel
     {
         public Diretor(string cpf) : base(5000, cpf)
         {

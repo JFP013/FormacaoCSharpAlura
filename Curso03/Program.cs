@@ -1,4 +1,5 @@
 ﻿using Curso03.Funcionarios;
+using Curso03.Sistema;
 using System;
 
 namespace Curso03
@@ -6,6 +7,12 @@ namespace Curso03
     class Program
     {
         static void Main(string[] args)
+        {
+            
+            Console.ReadLine();
+        }
+
+        public static void RelatorioFuncionarioSalario()
         {
             GerenciadorDeBonficacao gerenciadorDeBonificacao = new GerenciadorDeBonficacao();
 
@@ -76,8 +83,26 @@ namespace Curso03
             Console.WriteLine("");
 
             Console.WriteLine("O total de Funcionários é de: " + Funcionario.QtdFuncionario);
+        }
 
-            Console.ReadLine();
+        public static void LogarSistemaInterno()
+        {
+            SistemaInterno sistemaInterno = new SistemaInterno();
+
+            Diretor diretor = new Diretor("321456987-41");
+            diretor.Senha = "123";
+
+            sistemaInterno.Logar(diretor, "123");
+
+            GerenteDeConta gerenteDeConta = new GerenteDeConta("369852112-21");
+            gerenteDeConta.Senha = "ABC";
+
+            sistemaInterno.Logar(gerenteDeConta, "ABC");
+
+            ParceiroComercial parceiroComercial = new ParceiroComercial();
+            parceiroComercial.Senha = "123";
+
+            sistemaInterno.Logar(parceiroComercial, "12345");
         }
     }
 }

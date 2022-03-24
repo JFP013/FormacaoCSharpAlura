@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Curso03.Funcionarios
 {
-    public class GerenteDeConta : Funcionario
+    public class GerenteDeConta : FuncionarioAutenticavel
     {
         public GerenteDeConta(string cpf) : base(4000, cpf)
         {
