@@ -8,7 +8,6 @@ namespace Curso03
     {
         static void Main(string[] args)
         {
-            
             Console.ReadLine();
         }
 
