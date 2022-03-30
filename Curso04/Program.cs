@@ -6,7 +6,20 @@ namespace Curso04
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            try
+            {
+                ContaCorrente contaCorrente = new ContaCorrente(0,0);
+            }
+            catch(ArgumentException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Ocorreu um erro");
+            }
+
+            Console.ReadLine();
         }
     }
 }

@@ -4,12 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Curso02
+namespace Curso04
 {
     public class ContaCorrente
     {
         public ContaCorrente(int agencia, int numeroConta)
         {
+            if(agencia <= 0)
+            {
+                throw new ArgumentException("A agencia mão pode ser maior ou igual a 0", nameof(agencia));
+            }
+            if(numeroConta <= 0)
+            {
+                throw new ArgumentException("O numero da conta não pode ser menor ou igual a 0", nameof(numeroConta));
+            }
+
             Agencia = agencia;
             NumeroConta = numeroConta;
 
@@ -18,8 +27,8 @@ namespace Curso02
 
         public static int QtdContaCorrente { get; private set; }
         public Cliente Titular { get; set; }
-        public int Agencia { get; set; }
-        public int NumeroConta { get; set; }
+        public int Agencia { get; }
+        public int NumeroConta { get; }
         public double Saldo { get;  private set; }
 
         public bool Sacar(double valor)

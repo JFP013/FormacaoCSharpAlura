@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Curso02
+namespace Curso04
 {
     public class Cliente
     {
