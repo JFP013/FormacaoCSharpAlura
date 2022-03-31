@@ -31,53 +31,45 @@ namespace Curso04
         public int NumeroConta { get; }
         public double Saldo { get;  private set; }
 
-        public bool Sacar(double valor)
+        public void Sacar(double valor)
         {
             if(valor <= 0)
             {
-                Console.WriteLine("O valor para saque deve ser maior que 0");
-                return false;
+                throw new ArgumentException("O valor para saque deve ser maior que 0", nameof(valor));
             }
 
             if(Saldo < valor)
             {
-                Console.WriteLine("Saldo insuficiente");
-                return false;
+                throw new SaldoInsuficienteException("Saldo insuficiente");
             }
 
             Saldo -= valor;
-            return true;
         }
 
         public void Depositar(double valor)
         {
             if (valor <= 0)
             {
-                Console.WriteLine("O valor do deposito deve ser maior que 0");
-                return;
+                throw new ArgumentException("O valor do deposito deve ser maior que 0");
             }
 
             Saldo += valor;
         }
 
-        public bool Transferir(double valor, ContaCorrente contaCorrente)
+        public void Transferir(double valor, ContaCorrente contaCorrente)
         {
             if (valor <= 0)
             {
-                Console.WriteLine("O valor da transferência deve ser maior que 0");
-                return false;
+                throw new ArgumentException("O valor da transferência deve ser maior que 0", nameof(valor));
             }
 
             if(Saldo < valor)
             {
-                Console.WriteLine("Seu saldo é insuficiente para fazer a transferência");
-                return false;
+                throw new SaldoInsuficienteException("Seu saldo é insuficiente para fazer a transferência");
             }
 
             contaCorrente.Saldo += valor;
             Saldo -= valor;
-            return true;
-
         }
     }
 }
