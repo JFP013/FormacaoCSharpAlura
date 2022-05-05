@@ -6,7 +6,14 @@ namespace Curso05
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            //Entendendo a Substring
+            string url = "pagina&Argumento";
+
+            string argumentoUrl = url.Substring(7);
+
+            Console.WriteLine(argumentoUrl);
+
+            Console.ReadLine();
         }
     }
 }
