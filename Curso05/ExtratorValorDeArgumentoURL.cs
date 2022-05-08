@@ -30,6 +30,12 @@ namespace Curso06
             int indexArgumento = _argumento.IndexOf(argumento);
             string valorArgumento = _argumento.Substring(indexArgumento + argumento.Length + 1);
 
+            if (valorArgumento.Contains('&'))
+            {
+                int indexCaracter = valorArgumento.IndexOf('&');
+                return valorArgumento.Remove(indexCaracter);
+            }
+
             return valorArgumento;
         }
 
