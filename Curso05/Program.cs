@@ -1,17 +1,18 @@
 ﻿using System;
 
-namespace Curso05
+namespace Curso06
 {
     class Program
     {
         static void Main(string[] args)
         {
             //Entendendo a Substring
-            string url = "pagina&Argumento";
+            string url = "www.teste.com.br/cambio/?entrada=dolar&saida=real";
 
-            string argumentoUrl = url.Substring(7);
+            ExtratorValorDeArgumentoURL extrator = new ExtratorValorDeArgumentoURL(url);
 
-            Console.WriteLine(argumentoUrl);
+            string argumento = "entrada";
+            Console.WriteLine(extrator.GetValorArgumento(argumento));
 
             Console.ReadLine();
         }
