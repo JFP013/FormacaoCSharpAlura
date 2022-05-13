@@ -7,6 +7,29 @@ namespace Curso07
         static void Main(string[] args)
         {
             //Criando array de conta corrente
+            ListaContaCorrente conta = new ListaContaCorrente();
+            conta.AdcionarConta(new ContaCorrente(123, 123456));
+            conta.AdcionarConta(new ContaCorrente(123, 123456));
+            conta.AdcionarConta(new ContaCorrente(123, 123456));
+            conta.AdcionarConta(new ContaCorrente(123, 123456));
+            conta.AdcionarConta(new ContaCorrente(123, 123456));
+            conta.AdcionarConta(new ContaCorrente(123, 123456));
+            conta.AdcionarConta(new ContaCorrente(123, 123456));
+            conta.AdcionarConta(new ContaCorrente(123, 123456));
+            conta.AdcionarConta(new ContaCorrente(123, 123456));
+            conta.AdcionarConta(new ContaCorrente(123, 123456));
+            conta.AdcionarConta(new ContaCorrente(123, 123456));
+            conta.AdcionarConta(new ContaCorrente(123, 123456));
+            conta.AdcionarConta(new ContaCorrente(123, 123456));
+            conta.AdcionarConta(new ContaCorrente(123, 123456));
+            conta.AdcionarConta(new ContaCorrente(123, 123456));
+            conta.AdcionarConta(new ContaCorrente(123, 123456));
+            conta.AdcionarConta(new ContaCorrente(123, 123456));
+            conta.AdcionarConta(new ContaCorrente(123, 123456));
+            conta.AdcionarConta(new ContaCorrente(123, 123456));
+
+            Console.ReadLine();
+
 
             ContaCorrente[] ContasCorrente = new ContaCorrente[]
             {
