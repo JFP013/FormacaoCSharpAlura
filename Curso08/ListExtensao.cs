@@ -8,9 +8,9 @@ namespace Curso08
 {
     public static class ListExtensao
     {
-        public static void AdcionarVarios(this List<int> listaInteiros, params int[] inteiros)
+        public static void AdcionarVarios<T>(this List<T> listaInteiros, params T[] itens)
         {
-            foreach (int item in inteiros)
+            foreach (T item in itens)
             {
                 listaInteiros.Add(item);
             }
