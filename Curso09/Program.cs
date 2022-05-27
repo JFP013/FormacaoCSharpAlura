@@ -10,7 +10,18 @@ namespace Curso09
         {
             string diretorioArquvio = "Contas.txt";
 
-            
+            using (FileStream arquivo = new FileStream(diretorioArquvio, FileMode.Open))
+            {
+                using (StreamReader leitura = new StreamReader(arquivo))
+                {
+                    while (!leitura.EndOfStream)
+                    {
+                        string texto = leitura.ReadLine();
+                        Console.WriteLine(texto);
+                    }
+                }
+            }
+
             Console.ReadLine();
         }
     }
